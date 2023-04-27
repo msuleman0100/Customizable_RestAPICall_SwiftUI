@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,14 +11,18 @@
 		18424BA829FA1E9A0059A54E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18424BA729FA1E9A0059A54E /* ContentView.swift */; };
 		18424BAA29FA1E9C0059A54E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18424BA929FA1E9C0059A54E /* Assets.xcassets */; };
 		18424BAD29FA1E9C0059A54E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18424BAC29FA1E9C0059A54E /* Preview Assets.xcassets */; };
+		E15C94F1D1F94175D00BF5F1 /* Pods_RestiCall.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F1F3D6F85A9DFE326FEEAD6 /* Pods_RestiCall.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D8086AEE2E8F15706174214 /* Pods-RestiCall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestiCall.release.xcconfig"; path = "Target Support Files/Pods-RestiCall/Pods-RestiCall.release.xcconfig"; sourceTree = "<group>"; };
+		138E7E24C228505CD8ACFB82 /* Pods-RestiCall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestiCall.debug.xcconfig"; path = "Target Support Files/Pods-RestiCall/Pods-RestiCall.debug.xcconfig"; sourceTree = "<group>"; };
 		18424BA229FA1E9A0059A54E /* RestiCall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestiCall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18424BA529FA1E9A0059A54E /* RestiCallApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestiCallApp.swift; sourceTree = "<group>"; };
 		18424BA729FA1E9A0059A54E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		18424BA929FA1E9C0059A54E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18424BAC29FA1E9C0059A54E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7F1F3D6F85A9DFE326FEEAD6 /* Pods_RestiCall.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RestiCall.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,17 +30,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E15C94F1D1F94175D00BF5F1 /* Pods_RestiCall.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0CDDC4420F1864D3F1955F26 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				138E7E24C228505CD8ACFB82 /* Pods-RestiCall.debug.xcconfig */,
+				0D8086AEE2E8F15706174214 /* Pods-RestiCall.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		18424B9929FA1E9A0059A54E = {
 			isa = PBXGroup;
 			children = (
 				18424BA429FA1E9A0059A54E /* RestiCall */,
 				18424BA329FA1E9A0059A54E /* Products */,
+				0CDDC4420F1864D3F1955F26 /* Pods */,
+				93FF27887E6BCD214345B951 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +84,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		93FF27887E6BCD214345B951 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7F1F3D6F85A9DFE326FEEAD6 /* Pods_RestiCall.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18424BB029FA1E9C0059A54E /* Build configuration list for PBXNativeTarget "RestiCall" */;
 			buildPhases = (
+				D6E4E075827291BC5C7CDF60 /* [CP] Check Pods Manifest.lock */,
 				18424B9E29FA1E9A0059A54E /* Sources */,
 				18424B9F29FA1E9A0059A54E /* Frameworks */,
 				18424BA029FA1E9A0059A54E /* Resources */,
+				AB34525DD1D35B3874F3BEE8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -103,7 +130,7 @@
 				};
 			};
 			buildConfigurationList = 18424B9D29FA1E9A0059A54E /* Build configuration list for PBXProject "RestiCall" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AB34525DD1D35B3874F3BEE8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RestiCall/Pods-RestiCall-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RestiCall/Pods-RestiCall-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RestiCall/Pods-RestiCall-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6E4E075827291BC5C7CDF60 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RestiCall-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		18424B9E29FA1E9A0059A54E /* Sources */ = {
@@ -261,6 +330,7 @@
 		};
 		18424BB129FA1E9C0059A54E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 138E7E24C228505CD8ACFB82 /* Pods-RestiCall.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -290,6 +360,7 @@
 		};
 		18424BB229FA1E9C0059A54E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D8086AEE2E8F15706174214 /* Pods-RestiCall.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
