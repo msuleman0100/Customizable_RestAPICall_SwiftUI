@@ -11,7 +11,7 @@ import SwiftUI
 struct RestiCallApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            JokesView()
         }
     }
 }

@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		18424BA629FA1E9A0059A54E /* RestiCallApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18424BA529FA1E9A0059A54E /* RestiCallApp.swift */; };
-		18424BA829FA1E9A0059A54E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18424BA729FA1E9A0059A54E /* ContentView.swift */; };
+		18424BA829FA1E9A0059A54E /* JokesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18424BA729FA1E9A0059A54E /* JokesView.swift */; };
 		18424BAA29FA1E9C0059A54E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18424BA929FA1E9C0059A54E /* Assets.xcassets */; };
 		18424BAD29FA1E9C0059A54E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18424BAC29FA1E9C0059A54E /* Preview Assets.xcassets */; };
 		18424BB829FA213D0059A54E /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18424BB729FA213D0059A54E /* APIManager.swift */; };
 		18424BBA29FA22B90059A54E /* JokesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18424BB929FA22B90059A54E /* JokesVM.swift */; };
 		18424BBC29FA23D00059A54E /* JokesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18424BBB29FA23D00059A54E /* JokesResponse.swift */; };
-		18424BBE29FA2B410059A54E /* ErrorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18424BBD29FA2B410059A54E /* ErrorManager.swift */; };
+		189829C729FA936200EB5871 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189829C629FA936200EB5871 /* APIConstants.swift */; };
 		E15C94F1D1F94175D00BF5F1 /* Pods_RestiCall.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F1F3D6F85A9DFE326FEEAD6 /* Pods_RestiCall.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,13 +23,13 @@
 		138E7E24C228505CD8ACFB82 /* Pods-RestiCall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestiCall.debug.xcconfig"; path = "Target Support Files/Pods-RestiCall/Pods-RestiCall.debug.xcconfig"; sourceTree = "<group>"; };
 		18424BA229FA1E9A0059A54E /* RestiCall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestiCall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18424BA529FA1E9A0059A54E /* RestiCallApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestiCallApp.swift; sourceTree = "<group>"; };
-		18424BA729FA1E9A0059A54E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		18424BA729FA1E9A0059A54E /* JokesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesView.swift; sourceTree = "<group>"; };
 		18424BA929FA1E9C0059A54E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18424BAC29FA1E9C0059A54E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		18424BB729FA213D0059A54E /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		18424BB929FA22B90059A54E /* JokesVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesVM.swift; sourceTree = "<group>"; };
 		18424BBB29FA23D00059A54E /* JokesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesResponse.swift; sourceTree = "<group>"; };
-		18424BBD29FA2B410059A54E /* ErrorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorManager.swift; sourceTree = "<group>"; };
+		189829C629FA936200EB5871 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		7F1F3D6F85A9DFE326FEEAD6 /* Pods_RestiCall.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RestiCall.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -76,9 +76,9 @@
 			isa = PBXGroup;
 			children = (
 				18424BB329FA20750059A54E /* Views */,
-				18424BB629FA209B0059A54E /* Networking */,
 				18424BB429FA20800059A54E /* ViewModels */,
 				18424BB529FA20940059A54E /* Models */,
+				18424BB629FA209B0059A54E /* Networking */,
 				18424BA529FA1E9A0059A54E /* RestiCallApp.swift */,
 				18424BA929FA1E9C0059A54E /* Assets.xcassets */,
 				18424BAB29FA1E9C0059A54E /* Preview Content */,
@@ -97,7 +97,7 @@
 		18424BB329FA20750059A54E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				18424BA729FA1E9A0059A54E /* ContentView.swift */,
+				18424BA729FA1E9A0059A54E /* JokesView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -122,7 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				18424BB729FA213D0059A54E /* APIManager.swift */,
-				18424BBD29FA2B410059A54E /* ErrorManager.swift */,
+				189829C629FA936200EB5871 /* APIConstants.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -249,9 +249,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18424BBE29FA2B410059A54E /* ErrorManager.swift in Sources */,
-				18424BA829FA1E9A0059A54E /* ContentView.swift in Sources */,
+				18424BA829FA1E9A0059A54E /* JokesView.swift in Sources */,
 				18424BB829FA213D0059A54E /* APIManager.swift in Sources */,
+				189829C729FA936200EB5871 /* APIConstants.swift in Sources */,
 				18424BA629FA1E9A0059A54E /* RestiCallApp.swift in Sources */,
 				18424BBC29FA23D00059A54E /* JokesResponse.swift in Sources */,
 				18424BBA29FA22B90059A54E /* JokesVM.swift in Sources */,

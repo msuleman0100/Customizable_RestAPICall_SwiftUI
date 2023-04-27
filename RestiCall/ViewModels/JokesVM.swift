@@ -5,70 +5,35 @@
 //  Created by Muhammad Suleman on 4/27/23.
 //
 
-import Foundation
 import SwiftUI
-
 import Alamofire
 
-
-class JokesViewModel: ObservableObject {
+class JokesVM: ObservableObject {
     
-    @Published var jokes: JokeResponse?
+    //Object of JokesResponse
+    @Published var jokes: [JokeResponse] = []
+    // For saving error messages.
+    @Published var errorMessage: String = ""
+    // for managing state after hitting api
+    @Published var isLoading: Bool = false
     
+    //Fetching jokes here
     func fetchJokes() {
-        makeAPIRequest(url: "https://sv443.net/jokeapi/v2/joke/Any",
-                       headers: nil,
-                       parameters: nil,
-                       image: nil) { result in
+        isLoading = true
+        APIManager.shared.request(url: APIConstants.tenJokes) { [weak self] (result: Result<[JokeResponse], AFError>) in
+            guard let self = self else { return }
+            self.isLoading = false
+            
             switch result {
-            case .success(let data):
-                if let jokes = try? JSONDecoder().decode(JokeResponse.self, from: data as! Data) {
-                    self.jokes = jokes
-                    print(self.jokes)
-                }
+            case .success(let newJokes):
+                // Saving jokes for future use after they're successfully fetched
+                self.jokes = newJokes
             case .failure(let error):
-                print("API error: \(error.localizedDescription)")
-            }
-        }
-    }
-    
-    func makeAPIRequest(url: String, headers: HTTPHeaders?, parameters: Parameters?, image: UIImage?, completion: @escaping (Result<Any, Error>) -> Void) {
-        AF.upload(multipartFormData: { multipartFormData in
-            if let image = image, let imageData = image.jpegData(compressionQuality: 0.5) {
-                multipartFormData.append(imageData, withName: "image", fileName: "image.jpg", mimeType: "image/jpeg")
-            }
-            if let parameters = parameters {
-                for (key, value) in parameters {
-                    multipartFormData.append("\(value)".data(using: .utf8)!, withName: key as String)
-                }
-            }
-        }, to: url, headers: headers)
-        .validate()
-        .responseJSON { response in
-            switch response.result {
-            case .success(let value):
-                completion(.success(value))
-            case .failure(let error):
-                completion(.failure(error))
+                /// Saving the error messaage in self.errorMessage
+                /// Which can be print in debug-area or on scree to user as a popup
+                self.errorMessage = error.localizedDescription
             }
         }
     }
     
 }
-
-// MARK: - JokeResponse
-struct JokeResponse: Codable {
-    let error: Bool
-    let category, type, setup, delivery: String
-    let flags: Flags
-    let id: Int
-    let safe: Bool
-    let lang: String
-}
-
-// MARK: - Flags
-struct Flags: Codable {
-    let nsfw, religious, political, racist: Bool
-    let sexist, explicit: Bool
-}
-
