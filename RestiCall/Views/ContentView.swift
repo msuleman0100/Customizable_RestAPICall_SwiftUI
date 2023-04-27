@@ -13,15 +13,16 @@ struct ContentView: View {
      
      var body: some View {
          NavigationView {
-             List(viewModel.jokes, id: \.id) { joke in
-                 VStack(alignment: .leading) {
-                     Text(joke.setup)
-                         .font(.headline)
-                     Text(joke.punchline)
-                         .font(.subheadline)
-                         .foregroundColor(.secondary)
-                 }
-             }
+             Text("Hello")
+//             List(viewModel.jokes ?? [], id: \.id) { joke in
+//                 VStack(alignment: .leading) {
+//                     Text(joke.setup)
+//                         .font(.headline)
+//                     Text(joke.punchline)
+//                         .font(.subheadline)
+//                         .foregroundColor(.secondary)
+//                 }
+//             }
              .navigationTitle("Jokes")
              .onAppear {
                  viewModel.fetchJokes()
